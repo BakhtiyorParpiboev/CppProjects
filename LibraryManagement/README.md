@@ -1,1 +1,1 @@
-
+this is system for managing online e-library. That is built with combinatiion of postgres SQL and C++(libpqxx) for educational purpose to learn more and understand about how database works. If someone wants to use it. It is free to use.
