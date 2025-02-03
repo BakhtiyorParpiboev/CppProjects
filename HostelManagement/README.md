@@ -25,17 +25,6 @@ The **Hostel Management System** is a C++ program that manages **student accommo
   
 ---
 
-## 📂 Project Structure
-
----
-
-## ▶️ How to Run the Project
-
-### **1️⃣ Clone the Repository**
-```bash
-git clone https://github.com/your-username/Hostel-Management-System.git
-cd Hostel-Management-System
-
 ## 🛠️ Future Improvements
 
     🔄 Admin Login System for security.
@@ -46,5 +35,15 @@ cd Hostel-Management-System
 ## 📜 License
 
 This project is licensed under the MIT License. Feel free to use and modify it!
+
+----
+
+## ▶️ How to Run the Project
+
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/your-username/Hostel-Management-System.git
+cd Hostel-Management-System
+
 
 
