@@ -11,14 +11,11 @@ public:
     int age;
     long int contact;
 
-    // Default Constructor
     Students() : rollNumber("Unknown"), name("Unknown"), age(0), contact(0) {}
 
-    // Parameterized Constructor
     Students(std::string roll, std::string name, int age, long int contact)
         : rollNumber(roll), name(name), age(age), contact(contact) {}
 
-    // Display Student Info
     void displayStudentInfo() const {
         std::cout << "Name: " << name
                   << "\nRoll Number: " << rollNumber
@@ -34,13 +31,10 @@ public:
     bool occupiedStatus;
     std::string assignedStudentRoll;
 
-    // Default Constructor
     Room() : roomNumber(0), occupiedStatus(false), assignedStudentRoll("None") {}
 
-    // Parameterized Constructor
     Room(int r) : roomNumber(r), occupiedStatus(false), assignedStudentRoll("None") {}
 
-    // Assign Room
     void assignRoom(const std::string& studentRoll) {
         if (!occupiedStatus) {
             assignedStudentRoll = studentRoll;
@@ -51,7 +45,6 @@ public:
         }
     }
 
-    // Vacate Room
     void vacateRoom() {
         if (occupiedStatus) {
             std::cout << "Room " << roomNumber << " vacated by student: " << assignedStudentRoll << "\n";
@@ -62,7 +55,6 @@ public:
         }
     }
 
-    // Display Room Info
     void displayRoom() const {
         std::cout << "Room " << roomNumber << ": "
                   << (occupiedStatus ? "Occupied (Assigned to: " + assignedStudentRoll + ")" : "Vacant")
@@ -78,7 +70,6 @@ private:
     const std::string roomFile = "rooms.txt";
 
 public:
-    // Constructor - Load Data from Files
     Hostel() {
         loadStudents();
         loadRooms();
@@ -111,7 +102,6 @@ public:
         std::cout << "Student added successfully.\n";
     }
 
-    // Add a Room
     void addRoom() {
         int roomNumber;
         std::cout << "Enter Room Number: ";
@@ -131,7 +121,6 @@ public:
         std::cout << "Room " << roomNumber << " added successfully.\n";
     }
 
-    // Assign Room to a Student
     void assignRoom() {
         int roomNumber;
         std::string rollNumber;
@@ -163,7 +152,6 @@ public:
         saveRooms();
     }
 
-    // Vacate a Room
     void vacateRoom() {
         int roomNumber;
         std::cout << "Enter Room Number to Vacate: ";
@@ -182,7 +170,6 @@ public:
         saveRooms();
     }
 
-     // Load Students from File
     void loadStudents() {
         std::ifstream file(studentFile);
         if (!file) return;
@@ -199,7 +186,6 @@ public:
         file.close();
     }
 
-    // Save Students to File
     void saveStudents(){
         std::ofstream file(studentFile);
         if(!file) return;
@@ -209,8 +195,7 @@ public:
         }
         file.close();
     }
-    
-    // Load Rooms from File
+
     void loadRooms() {
         std::ifstream file(roomFile);
         if (!file) return;
@@ -230,7 +215,6 @@ public:
         file.close();
     }
 
-    // Save Rooms to File
     void saveRooms() {
         std::ofstream file(roomFile);
         if (!file) return;
@@ -242,7 +226,6 @@ public:
         file.close();
     }
 
-    // Display All Students
     void displayAllStudents() const {
         if(!students.empty()){
             std::cout << "\n-------------------\n";
@@ -257,7 +240,6 @@ public:
         }
     }
 
-    // Display All Rooms
     void displayAllRooms() const {
         if(!rooms.size() == 0){
             std::cout << "Total rooms: " << rooms.size() << std::endl;
@@ -274,7 +256,6 @@ public:
     
 };
 
-// **Step 2: Implement the Menu System**
 int main() {
     Hostel hostel;
     int choice;
