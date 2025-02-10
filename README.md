@@ -33,9 +33,7 @@ Here’s an overview of the types of projects included in this repository:
 - Implementations of:
   - Arrays
   - Vectors
-  - Linked Lists
-  - Stacks
-  - Queues
+
 
 ### 🔹 Algorithms
 - Challenges focused on:
